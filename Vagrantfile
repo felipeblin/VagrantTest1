@@ -1,3 +1,4 @@
+
 # -*- mode: ruby *-
 # vi: set ft=ruby :
 
@@ -13,7 +14,8 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
   config.vm.box = "hashicorp/precise64"
-  config.vm.hostname = "devops001"
+  config.vm.hostname = "webdevops001.socovesa.cl"
+  config.vm.forward_port 80, 7080
   config.vm.provider :"virtualbox" do |v|
      v.memory  = 1024
      v.name = "vbox_devops001"
