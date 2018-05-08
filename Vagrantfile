@@ -13,7 +13,8 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "hashicorp/precise64"
+  config.vm.box = "ubuntu/precise64"
+  #config.vm.box = "hashicorp/precise64"
   config.vm.hostname = "webdevops001.socovesa.cl"
   config.vm.network "forwarded_port", guest: 80, host: 81
   config.vm.provider :"virtualbox" do |v|
