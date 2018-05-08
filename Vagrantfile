@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
   # boxes at https://vagrantcloud.com/search.
   config.vm.box = "hashicorp/precise64"
   config.vm.hostname = "webdevops001.socovesa.cl"
-  config.vm.forward_port 80, 7080
+  config.vm.network "forwarded_port", guest: 80, host: 81
   config.vm.provider :"virtualbox" do |v|
      v.memory  = 1024
      v.name = "vbox_devops001"
